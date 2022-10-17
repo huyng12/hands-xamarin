@@ -5,10 +5,14 @@ using System.Runtime.CompilerServices;
 
 using Xamarin.Forms;
 
+using Hands.Services.User;
+
 namespace Hands.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        public IUserService UserService => DependencyService.Get<IUserService>();
+
         bool isBusy = false;
         public bool IsBusy
         {
@@ -24,7 +28,7 @@ namespace Hands.ViewModels
         }
 
         protected bool SetProperty<T>(ref T backingStore, T value,
-            [CallerMemberName]string propertyName = "",
+            [CallerMemberName] string propertyName = "",
             Action onChanged = null)
         {
             if (EqualityComparer<T>.Default.Equals(backingStore, value))
@@ -49,4 +53,3 @@ namespace Hands.ViewModels
         #endregion
     }
 }
-
