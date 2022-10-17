@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Hands.Services;
 using Hands.Views;
 
 namespace Hands
@@ -13,7 +12,6 @@ namespace Hands
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
