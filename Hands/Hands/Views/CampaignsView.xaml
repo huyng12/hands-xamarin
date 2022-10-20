@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BaseContentPage
+    x:Class="Hands.Views.CampaignsView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Hands.Views"
+    xmlns:viewmodels="clr-namespace:Hands.ViewModels"
+    xmlns:models="clr-namespace:Hands.Models.Campaign"
+    Title="{Binding Title}"
+    x:DataType="viewmodels:CampaignsViewModel">
+
+    <ListView ItemsSource="{Binding Campaigns}">
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="models:CampaignItem">
+                <TextCell Text="{Binding Title}" Detail="{Binding Id}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</views:BaseContentPage>

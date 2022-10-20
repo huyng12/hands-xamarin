@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
+using Hands.ViewModels.Base;
 using Hands.Models.User;
 
 namespace Hands.ViewModels
@@ -29,7 +30,7 @@ namespace Hands.ViewModels
             set => SetProperty(ref email, value);
         }
 
-        public async Task OnAppearing()
+        public override async Task InitializeAsync()
         {
             UserInfo user = await UserService.GetCurrentUser();
             Name = $"Hello, {user.FirstName} {user.LastName}";

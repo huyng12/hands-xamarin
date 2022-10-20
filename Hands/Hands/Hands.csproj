@@ -18,6 +18,7 @@
     <None Remove="Models\Fund\" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="Services\Campaign\" />
+    <None Remove="ViewModels\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -25,5 +26,17 @@
     <Folder Include="Models\User\" />
     <Folder Include="Services\User\" />
     <Folder Include="Services\Campaign\" />
+    <Folder Include="ViewModels\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\AccountPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\AccountPage.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

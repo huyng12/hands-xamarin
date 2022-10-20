@@ -13,7 +13,7 @@ namespace Hands.Services.Campaign
         {
             PageIndex = 0,
             TotalPages = 12,
-            Data = new CampaignItem[1] {
+            Items = new List<CampaignItem> {
                 new CampaignItem {
                     Id = "fcbb29b0-5029-11ed-bdc3-0242ac120002",
                     Category = new CampaignCategory
@@ -52,7 +52,7 @@ namespace Hands.Services.Campaign
         public async Task<CampaignItem> GetCampaignByIdAsync()
         {
             await Task.Delay(10);
-            return campaigns.Data.ElementAt(0);
+            return campaigns.Items.ElementAt(0);
         }
     }
 }
