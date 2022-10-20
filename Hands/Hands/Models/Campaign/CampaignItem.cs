@@ -5,13 +5,37 @@ using Newtonsoft.Json;
 
 namespace Hands.Models.Campaign
 {
+    public class CampaignOwner
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("avatar_url")]
+        public string AvatarUrl { get; set; }
+
+        [JsonProperty("is_verified")]
+        public bool IsVerified { get; set; }
+    }
+
+    public class CampaignCategory
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+    }
+
     public class CampaignItem
     {
         [JsonProperty("id")]
         public string Id { get; set; }
 
         [JsonProperty("category")]
-        public string Category { get; set; }
+        public CampaignCategory Category { get; set; }
 
         [JsonProperty("title")]
         public string Title { get; set; }
@@ -32,7 +56,7 @@ namespace Hands.Models.Campaign
         public CampaignOwner Owner { get; set; }
 
         [JsonProperty("comments")]
-        public List<CampaignComment> Comments { get; set; }
+        public IEnumerable<CampaignComment> Comments { get; set; }
 
         [JsonProperty("expired_at")]
         public DateTime ExpiredAt { get; set; }

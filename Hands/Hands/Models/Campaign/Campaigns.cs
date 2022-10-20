@@ -14,6 +14,6 @@ namespace Hands.Models.Campaign
         public int TotalPages { get; set; }
 
         [JsonProperty("data")]
-        public List<CampaignItem> Data;
+        public IEnumerable<CampaignItem> Data { get; set; }
     }
 }
