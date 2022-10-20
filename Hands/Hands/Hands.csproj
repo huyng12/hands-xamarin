@@ -17,14 +17,13 @@
     <None Remove="Services\User\" />
     <None Remove="Models\Fund\" />
     <None Remove="Newtonsoft.Json" />
-    <None Remove="Services\Campaigns\" />
+    <None Remove="Services\Campaign\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Services\" />
     <Folder Include="Models\User\" />
     <Folder Include="Services\User\" />
-    <Folder Include="Models\Campaigns\" />
-    <Folder Include="Services\Campaigns\" />
+    <Folder Include="Services\Campaign\" />
   </ItemGroup>
 </Project>
