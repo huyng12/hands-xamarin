@@ -23,9 +23,8 @@
     </Shell.Resources>
 
     <TabBar>
-        <ShellContent Title="About" Route="AboutView" ContentTemplate="{DataTemplate views:AboutView}" />
-        <ShellContent Title="Account" Route="AccountView" ContentTemplate="{DataTemplate views:AccountView}" />
         <ShellContent Title="Campaign" Route="CampaignsView" ContentTemplate="{DataTemplate views:CampaignsView}" />
+        <ShellContent Title="Account" Route="AccountView" ContentTemplate="{DataTemplate views:AccountView}" />
     </TabBar>
 
 </Shell>

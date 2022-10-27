@@ -36,9 +36,4 @@
   <ItemGroup>
     <Compile Remove="Views\AccountPage.xaml.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\AboutView.xaml.cs">
-      <DependentUpon>AboutView.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
 </Project>
