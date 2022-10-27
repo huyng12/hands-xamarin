@@ -49,7 +49,7 @@ namespace Hands.Services.Campaign
             return campaigns;
         }
 
-        public async Task<CampaignItem> GetCampaignByIdAsync()
+        public async Task<CampaignItem> GetCampaignByIdAsync(string campaignId)
         {
             await Task.Delay(10);
             return campaigns.Items.ElementAt(0);

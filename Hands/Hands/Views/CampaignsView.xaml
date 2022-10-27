@@ -4,15 +4,16 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:Hands.Views"
-    xmlns:viewmodels="clr-namespace:Hands.ViewModels"
     xmlns:models="clr-namespace:Hands.Models.Campaign"
-    Title="{Binding Title}"
+    xmlns:viewmodels="clr-namespace:Hands.ViewModels"
     x:DataType="viewmodels:CampaignsViewModel">
 
-    <ListView ItemsSource="{Binding Campaigns}">
+    <ListView ItemsSource="{Binding Campaigns}" ItemTapped="OnCampaignItemTapped">
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="models:CampaignItem">
-                <TextCell Text="{Binding Title}" Detail="{Binding Id}" />
+                <TextCell
+                    Text="{Binding Title}"
+                    Detail="{Binding Owner.Name}" />
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

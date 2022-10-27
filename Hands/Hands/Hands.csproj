@@ -9,6 +9,7 @@
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Models\" />
@@ -19,6 +20,7 @@
     <None Remove="Newtonsoft.Json" />
     <None Remove="Services\Campaign\" />
     <None Remove="ViewModels\Base\" />
+    <None Remove="CommunityToolkit.Mvvm" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
