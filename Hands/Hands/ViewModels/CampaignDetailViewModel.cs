@@ -12,7 +12,7 @@ namespace Hands.ViewModels
     [QueryProperty(nameof(CampaignId), "Id")]
     public class CampaignDetailViewModel : BaseViewModel
     {
-        public string CampaignId { get; set; }
+        public int CampaignId { get; set; }
 
         private CampaignItem campaign;
         public CampaignItem Campaign

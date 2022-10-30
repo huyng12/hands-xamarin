@@ -6,14 +6,13 @@
     xmlns:views="clr-namespace:Hands.Views"
     xmlns:models="clr-namespace:Hands.Models.Campaign"
     xmlns:viewmodels="clr-namespace:Hands.ViewModels"
-    x:DataType="viewmodels:CampaignsViewModel">
+    x:DataType="viewmodels:CampaignsViewModel"
+    Title="{Binding Title}">
 
     <ListView ItemsSource="{Binding Campaigns}" ItemTapped="OnCampaignItemTapped">
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="models:CampaignItem">
-                <TextCell
-                    Text="{Binding Title}"
-                    Detail="{Binding Owner.Name}" />
+                <TextCell Text="{Binding Title}" Detail="{Binding Owner.Name}" />
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

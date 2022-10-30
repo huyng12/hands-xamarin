@@ -10,7 +10,7 @@
 
     <StackLayout Padding="5">
         <Label Text="{Binding Campaign.Title}" />
-        <Label Text="{Binding Campaign.Description}" />
+        <Label Text="{Binding Campaign.Owner.Name}" />
     </StackLayout>
 
 </views:BaseContentPage>

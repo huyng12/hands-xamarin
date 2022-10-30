@@ -9,6 +9,6 @@ namespace Hands.Services.Campaign
     public interface ICampaignService
     {
         Task<Campaigns> GetCampaignsAsync();
-        Task<CampaignItem> GetCampaignByIdAsync(string campaignId);
+        Task<CampaignItem> GetCampaignByIdAsync(int campaignId);
     }
 }
